@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Our Space ❤️</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+</head>
+
+<body>
+
+<!-- 💖 MESSAGE INTRO -->
+<div id="introScreen">
+
+  <div class="introBox">
+    <h2>💌 Hey Love...</h2>
+
+    <!-- 💖 TYPEWRITER -->
+    <p id="typeText"></p>
+
+    <!-- 💞 COUPLE NAMES -->
+    <small id="coupleNames"></small>
+
+    <button onclick="enterApp()">Enter Our World 💌</button>
+  </div>
+
+</div>
+
+<!-- 💌 DAILY POPUP -->
+<div id="dailyPopup" style="display:none;">
+  <div class="popupBox">
+    <p id="popupText"></p>
+  </div>
+</div>
+
+<!-- 🎵 MUSIC -->
+<audio id="bgMusic" src="music/intro.mp3" loop></audio>
+
+<div class="hearts"></div>
+
+<div class="chat-container">
+
+  <h3 class="love-text">Hey love ❤️ welcome to our world</h3>
+
+  <!-- 💖 DAILY MESSAGE -->
+  <p id="dailyMsg" style="text-align:center;color:#ff4d88;"></p>
+
+  <p id="status">🟢 Online</p>
+
+  <!-- NAV -->
+  <div class="nav">
+    <button onclick="goChat()">💬 Chat</button>
+    <button onclick="goGame()">🎮 Games</button>
+    <button onclick="toggleDark()">🌙Dark Theme</button>
+  </div>
+
+  <!-- MUSIC -->
+  <div class="music-box">
+    <button onclick="toggleMusic()">⏸</button>
+    <input type="range" min="0" max="1" step="0.1" onchange="changeVolume(this)">
+  </div>
+
+  <!-- CHAT -->
+  <div id="chatBox"></div>
+
+  <!-- INPUT -->
+  <div class="input-area">
+    <input id="messageInput" placeholder="Type message..." />
+    <button onclick="sendMessage()">💌</button>
+    <button onclick="sendLove();">💖</button>
+    <button onclick="startRecording()">🎤</button>
+  </div>
+
+  <!-- 💌 OPEN WHEN -->
+  <h3>💌 Open When</h3>
+
+  <button onclick="openLetter('sad')">😔 When Sad</button>
+  <button onclick="openLetter('miss')">💖 When Missing Me</button>
+  <button onclick="openLetter('happy')">😊 When Happy</button>
+
+  <p id="letterText"></p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

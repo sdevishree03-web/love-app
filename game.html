@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini Games ❤️</title>
+
+  <style>
+    body {
+      background: #e6cfd4;
+      font-family: Arial;
+      text-align: center;
+    }
+
+    button {
+      padding: 8px 12px;
+      margin: 5px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      background: pink;
+    }
+
+    #gameArea {
+      margin-top: 20px;
+      height: 320px;
+      position: relative;
+      border: 1px solid #ccc;
+      background: white;
+    }
+    #gameArea h2 {
+  animation: pop 0.2s ease;
+}
+
+@keyframes pop {
+  from {transform: scale(0.8);}
+  to {transform: scale(1);}
+}
+/* 🎡 WHEEL DESIGN */
+#wheelContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#wheel {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  transition: transform 2s ease-out;
+}
+  </style>
+</head>
+
+<body>
+
+<h2>🎮 Mini Games</h2>
+
+<button onclick="startHeartGame()">❤️ Heart</button>
+<button onclick="startKissGame()">💋 Kiss</button>
+<button onclick="startQuiz()">🧠 Quiz</button>
+<button onclick="startDare()">🎲 Dare</button>
+<button onclick="spinWheel()">🎡 Wheel</button>
+<button onclick="guessMood()">😊 Mood</button>
+<button onclick="completeSentence()">💬 Sentence</button>
+<button onclick="tapGame()">⚡ Tap</button>
+
+<div id="gameArea">
+
+  <!-- 🎡 WHEEL -->
+  <div id="wheelContainer">
+    <div id="wheel">🎡</div>
+  </div>
+
+</div>
+
+<!-- 🔊 SOUND -->
+<audio id="spinSound" src="music/spin.mp3"></audio>
+
+<script src="game.js"></script>
+
+</body>
+</html>
