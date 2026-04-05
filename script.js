@@ -10,7 +10,7 @@ firebase.initializeApp(firebaseConfig);
 var db = firebase.database();
 
 let username = prompt("Enter your name");
-let profilePic = "images/bg1.jpg";
+let profilePic = "bg1.jpg";
 
 /* 💖 TYPEWRITER */
 let message = "This is our little world ❤️\nWhere every message is a memory 💖\nEvery moment is ours ✨";
